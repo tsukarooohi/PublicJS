@@ -1,0 +1,56 @@
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+
+	var img_array = [];
+	$('.sub_box img').each(function(i){
+	
+		img_array[i] = $(this).attr('src');
+	});
+
+
+	var str = '<img src="'+ img_array[0] +'">';
+	$('.view_box').append(str);
+
+	$('.sub_box a').click(function(){
+	
+		$('.view_box img').attr('src', img_array[$(this)index()]);
+	});
+
+});
+
+
+</script>
+</head>
+<body>
+
+	<div class="main_box">
+
+		<div class="view_box"></div>
+
+		<div class="sub_box">
+			<a href="javascript:void(0);"><img src="n2.jpg"></a>
+			<a href="javascript:void(0);"><img src="n5.jpg"></a>
+			<a href="javascript:void(0);"><img src="img3.jpg"></a>
+			<a href="javascript:void(0);"><img src="img4.jpg"></a>
+			<a href="javascript:void(0);"><img src="n2.jpg"></a>
+			<a href="javascript:void(0);"><img src="n5.jpg"></a>
+			<a href="javascript:void(0);"><img src="img4.jpg"></a>
+		</div>
+
+	</div>
+
+</body>
+</html>
+
+
+
+
