@@ -1,0 +1,82 @@
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	var boxs = [];
+	$('.box').each(function( i ){
+		
+		boxs[i] = $(this);
+		$(":input[name='sele']", this).change(function(){
+			
+			var key = $(this).val();
+			var str = $(this).children(':selected').text();
+
+			$(":input[name='te']" , boxs[i]).val(str);
+		});
+	});
+});
+</script>
+</head>
+<body>
+
+	<div class="box">
+		
+		<form method="post" action="">
+
+			<select name="sele">
+				<option value="1">ほげ１</option>
+				<option value="2">ほげ２</option>
+				<option value="3">ほげ３</option>
+				<option value="4">ほげ４</option>
+				<option value="5">ほげ５</option>
+			</select>
+			
+			<input type="text" name="te" value="" />
+			
+		</form>
+
+	</div>
+	
+	<div class="box">
+		
+		<form method="post" action="">
+
+			<select name="sele">
+				<option value="11">ほげほげ１</option>
+				<option value="21">ほげほげ２</option>
+				<option value="31">ほげほげ３</option>
+				<option value="41">ほげほげ４</option>
+				<option value="51">ほげほげ５</option>
+			</select>
+			
+			<input type="text" name="te" value="" />
+			
+		</form>
+
+	</div>
+	
+	<div class="box">
+		
+		<form method="post" action="">
+
+			<select name="sele">
+				<option value="12">てす１</option>
+				<option value="22">てす２</option>
+				<option value="32">てす３</option>
+				<option value="42">てす４</option>
+				<option value="52">てす５</option>
+			</select>
+			
+			<input type="text" name="te" value="" />
+			
+		</form>
+
+	</div>
+		
+</body>	
+</html>
