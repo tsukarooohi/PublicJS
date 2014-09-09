@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+
+	$('body .link-replace').each(function(e) {
+		
+		$(this).click(function() {
+			
+			var link = $(this).data('link');
+			var w = window.open();
+			w.location.href = link;
+		});
+		
+	});
+
+});
+
+</script>
+</head>
+<body>
+	<a href="#" class="link-replace" data-link='["http://yahoo.co.jp/"]'>リンク1</a><br />
+	<a href="#" class="link-replace" data-link='["http://google.co.jp/"]'>リンク2</a><br />
+	<a href="#" class="link-replace" data-link='["http://b.hatena.ne.jp/"]'>リンク3</a><br />
+</body>
+</html>
